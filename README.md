@@ -24,6 +24,8 @@ A deep neural network implemented in PyTorch for recognizing handwritten digits 
 
 This repository contains the source code for a deep neural network designed to classify handwritten digits using the MNIST dataset. The code is built with PyTorch and provides functionalities for training, testing, and evaluating the model.
 
+    - torch.manual_seed(100)
+
 ## Installation
 
 1. Clone the repository:
@@ -52,6 +54,7 @@ The neural network architecture is defined in the DeepNeuralNetworkModel class. 
 ### Hyperparameters
 Customize hyperparameters according to the requirements. Important hyperparameters include num_hidden, learning_rate, num_epochs, and batch_size.
 
+    - num_epochs = int(num_iters / (len(train_dataset) / batch_size))
 ### Training
 The training process involves iterating over the training dataset, computing the loss, and updating the model parameters using gradient descent. The training loop is implemented in this file.
 
@@ -60,6 +63,9 @@ Testing the model involves evaluating its performance on a separate test dataset
 
 ### Results
 After training and testing, i can analyze the results, including accuracy, precision, recall, and F1-score, to assess the model's performance.
+
+    - Accuracy: 97.78%
+    - Precision: 0.9780, Recall: 0.9778, F1-score: 0.9778
 
 ### Troubleshooting
 If encounter any issues, please check the following:
